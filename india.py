@@ -1,18 +1,50 @@
 states = {
 
-    "andhra pradesh": {
-        "formed": "1956",
-        "named_by": "Named after Andhra region and Pradesh means state",
-        "capital": "Amaravati",
+"andhra pradesh": {
 
-        "places": [
-            "Tirupati",
-            "Araku Valley",
-            "Vizag Beach",
-            "Amaravati"
-        ]
+    "formed": "1956",
+
+    "named_by": "Named after Andhra region and Pradesh means state",
+
+    "capital": "Amaravati",
+
+    "rich_people": {
+        "millionaires": "Approx 95,000",
+        "billionaires": "12"
     },
 
+    "politicians": [
+
+        {
+            "name": "Y. S. Jagan Mohan Reddy",
+            "dob": "21 December 1972",
+            "property": "Approx ₹510 Crores"
+        },
+
+        {
+            "name": "N. Chandrababu Naidu",
+            "dob": "20 April 1950",
+            "property": "Approx ₹930 Crores"
+        },
+
+        {
+            "name": "Pawan Kalyan",
+            "dob": "2 September 1971",
+            "property": "Approx ₹164 Crores"
+        }
+
+    ],
+
+    "places": [
+
+        "Tirupati",
+        "Araku Valley",
+        "Vizag Beach",
+        "Amaravati"
+
+    ]
+
+},
     "telangana": {
         "formed": "2014",
         "named_by": "Telangana word came from Telugu Angana",
@@ -126,11 +158,29 @@ def show_state_info():
             print("Named By       :", states[state]["named_by"])
             print("Capital        :", states[state]["capital"])
 
+
+            print("\nRich People Data")
+            print("----------------------")
+
+            print("Millionaires :", states[state]["rich_people"]["millionaires"])
+            print("Billionaires :", states[state]["rich_people"]["billionaires"])
+
+
+            print("\nTop Politicians")
+            print("----------------------")
+
+
+            for politician in states[state]["politicians"]:
+
+                print("\nName :", politician["name"])
+                print("DOB :", politician["dob"])
+                print("Property :", politician["property"])
+
+
             print("\nFamous Places:")
 
             for place in states[state]["places"]:
                 print("-", place)
-
         else:
             print("\nState not found")
             print("Please enter correct state name")
