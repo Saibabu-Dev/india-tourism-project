@@ -49,8 +49,16 @@ def home():
 
         else:
 
-            result = "<h2>State not found</h2>"
+            result = """
 
+<h2>State not found</h2>
+
+<h3>Available States:</h3>
+
+<p>Kerala</p>
+<p>Andhra Pradesh</p>
+
+"""  
 
     return f"""
 
@@ -58,7 +66,7 @@ def home():
 
     <form>
 
-        <input type='text' name='state' placeholder='Enter State Name'>
+        <input type='text' name='state' placeholder='Enter State Name' value='{state if state else ""}'>
 
         <button type='submit'>Search</button>
 
