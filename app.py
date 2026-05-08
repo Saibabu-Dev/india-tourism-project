@@ -62,7 +62,7 @@ def home():
 
     return f"""
 
-    <h1>India Tourism Project - auto deploy wokring</h1>
+    <h1>India Tourism Project - pipeline auto deploy wokring</h1>
 
     <form>
 
