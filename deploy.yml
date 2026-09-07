@@ -16,3 +16,6 @@ jobs:
     run: |
       python --version
       python -m py_compile app.py india.py
+
+    - name: Build Docker image
+      run: docker build -t india-tourism-app .
